@@ -1,4 +1,4 @@
-:- consult("TendasEArvores").
+:- consult("../TendasEArvores").
 
 % Helper predicate to count the number of variables in a nested list
 count_vars(List, Count) :-
@@ -345,6 +345,9 @@ test(valida_8) :-
 
 test(valida_9) :-
     assertion(\+ valida([(1, 1), (1, 2)], [(1, 1), (1, 2)])).
+
+test(valida_10) :-
+    assertion(\+ valida([(1,1),(1,3),(3,2)],[(1,2),(3,1),(3,3)])).
 
 :- end_tests(valida).
 
