@@ -367,4 +367,35 @@ test(puzzle_8_1) :-
     resolve(P),
     sol(8-1, P).
 
+% Extra tests
+
+puzzleextra(8-222, 
+([
+[_,_,a,_,_,_,_,_],
+[a,_,_,_,_,_,_,a],
+[_,a,_,_,_,a,_,_],
+[a,_,_,_,_,_,a,_],
+[_,a,_,_,a,_,_,a],
+[_,_,_,_,_,_,_,_],
+[_,_,_,a,_,_,a,_],
+[_,a,_,_,_,_,_,_]
+], [2, 1, 2, 1, 3, 1, 1, 2], [2, 2, 2, 1, 0, 2, 1, 3])).
+
+solextra(8-222, ([
+[r,t,a,r,r,r,r,t],
+[a,r,r,r,r,t,r,a],
+[t,a,t,r,r,a,r,r],
+[a,r,r,r,r,r,a,t],
+[t,a,t,r,a,t,r,a],
+[r,r,r,r,r,r,r,t],
+[r,t,r,a,r,r,a,r],
+[r,a,r,t,r,r,t,r]], 
+[2, 1, 2, 1, 3, 1, 1, 2], [2, 2, 2, 1, 0, 2, 1, 3])
+).
+
+test(puzzle_extra_8_222) :-
+    puzzleextra(8-222, P),
+    resolve(P),
+    solextra(8-222, P).
+
 :- end_tests(puzzle).
